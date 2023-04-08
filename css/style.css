@@ -51,12 +51,17 @@ h1 {
 
 .menu {
   display: none;
+  position: absolute;
+  inset: 0;
   font-size: 32px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b0d0f;
 }
 .menu__icon {
   display: block;
   position: relative;
-  z-index: 5;
+  z-index: 1;
   width: 24px;
   height: 24px;
   -webkit-tap-highlight-color: transparent;
@@ -108,7 +113,74 @@ h1 {
   width: 17.8px;
   left: 3.1px;
 }
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.menu__item {
+  line-height: 40px;
+}
+.menu__item:hover {
+  background: -o-linear-gradient(149.89deg, #8c44d4 5.04%, #ffd0a5 76.02%);
+  background: linear-gradient(300.11deg, #8c44d4 5.04%, #ffd0a5 76.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.menu._active {
+  display: block;
+}
 
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  gap: 24px;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.socials__item {
+  font-size: 0;
+}
+.socials__icon {
+  width: 32px;
+  height: 32px;
+}
+.socials__icon > use {
+  fill: #777;
+}
+.socials__icon:hover > use {
+  fill: #fff;
+}
+
+.logo {
+  z-index: 1;
+}
 .logo__title {
   font-size: 24px;
   font-weight: 900;
@@ -121,9 +193,11 @@ h1 {
 }
 
 .button {
+  cursor: pointer;
   position: relative;
   font-size: 16px;
   background-color: transparent;
+  z-index: 1;
   letter-spacing: 0.02em;
   line-height: 24px;
   border-width: 0;
@@ -135,8 +209,8 @@ h1 {
   inset: 0;
   border-radius: 8px;
   padding: 2px;
-  background: -o-linear-gradient(357.5deg, #FFD0A5 17.66%, #8C44D4 83.71%);
-  background: linear-gradient(92.5deg, #FFD0A5 17.66%, #8C44D4 83.71%);
+  background: -o-linear-gradient(357.5deg, #ffd0a5 17.66%, #8c44d4 83.71%);
+  background: linear-gradient(92.5deg, #ffd0a5 17.66%, #8c44d4 83.71%);
   -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;

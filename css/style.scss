@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 $bg-color: #08090a;
+$menu-bg: #0b0d0f;
+
 $gray: #777;
 
 $text-color: #fff;
@@ -38,7 +40,6 @@ h1 {
         gap: 16px;
     }
     &__logo {
-        // margin-left: 16px;
     }
 }
 .container {
@@ -47,11 +48,16 @@ h1 {
 }
 .menu {
     display: none;
+    position: absolute;
+    inset: 0;
     font-size: 32px;
+    width: 100vw;
+    height: 100vh;
+    background-color: $menu-bg;
     &__icon {
         display: block;
         position: relative;
-        z-index: 5;
+        z-index: 1;
         width: 24px;
         height: 24px;
         -webkit-tap-highlight-color: transparent;
@@ -93,8 +99,56 @@ h1 {
             }
         }
     }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        list-style: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__item {
+        line-height: 40px;
+        &:hover {
+            background: linear-gradient(300.11deg, #8c44d4 5.04%, #ffd0a5 76.02%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+    &._active {
+        display: block;
+    }
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    &__item {
+        font-size: 0;
+    }
+    &__icon {
+        width: 32px;
+        height: 32px;
+        & > use {
+            fill: $gray;
+        }
+        &:hover > use {
+            fill: #fff;
+        }
+    }
 }
 .logo {
+    z-index: 1;
     &__title {
         font-size: 24px;
         font-weight: 900;
@@ -107,12 +161,11 @@ h1 {
     }
 }
 .button {
+    cursor: pointer;
     position: relative;
-    // display: block;
     font-size: 16px;
     background-color: transparent;
-    // border: 2px solid linear-gradient(#FFD0A5, #8C44D4);
-    // border-radius: 8px;
+    z-index: 1;
     letter-spacing: 0.02em;
     line-height: 24px;
     border-width: 0;
@@ -123,9 +176,8 @@ h1 {
         inset: 0;
         border-radius: 8px;
         padding: 2px;
-        background: linear-gradient(92.5deg, #FFD0A5 17.66%, #8C44D4 83.71%);
+        background: linear-gradient(92.5deg, #ffd0a5 17.66%, #8c44d4 83.71%);
         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: exclude;
     }
 }
-// background: linear-gradient(92.5deg, #FFD0A5 17.66%, #8C44D4 83.71%);
