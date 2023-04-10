@@ -21,6 +21,18 @@ h1 {
   font-size: 56px;
 }
 
+ul {
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #08090a;
+}
+body._active {
+  overflow: hidden;
+}
+
 .header {
   background-color: #08090a;
   padding: 16px 16px 0 16px;
@@ -45,6 +57,14 @@ h1 {
           align-items: center;
   gap: 16px;
 }
+.header__logo {
+  z-index: 2;
+}
+.header__button {
+  letter-spacing: 0.02em;
+  z-index: 2;
+}
+
 .container {
   margin: 0 auto;
 }
@@ -57,11 +77,12 @@ h1 {
   width: 100vw;
   height: 100vh;
   background-color: #0b0d0f;
+  z-index: 1;
 }
 .menu__icon {
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 24px;
   height: 24px;
   -webkit-tap-highlight-color: transparent;
@@ -126,7 +147,6 @@ h1 {
           align-items: center;
   gap: 8px;
   position: absolute;
-  list-style: none;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -146,6 +166,7 @@ h1 {
 }
 .menu._active {
   display: block;
+  overflow: hidden;
 }
 
 .socials {
@@ -155,7 +176,6 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  list-style: none;
   gap: 24px;
   position: absolute;
   left: 50%;
@@ -178,9 +198,6 @@ h1 {
   fill: #fff;
 }
 
-.logo {
-  z-index: 1;
-}
 .logo__title {
   font-size: 24px;
   font-weight: 900;
@@ -197,11 +214,12 @@ h1 {
   position: relative;
   font-size: 16px;
   background-color: transparent;
-  z-index: 1;
-  letter-spacing: 0.02em;
   line-height: 24px;
   border-width: 0;
   padding: 8px 16px;
+}
+.button:hover {
+  text-decoration: underline;
 }
 .button::before {
   content: "";
@@ -215,4 +233,181 @@ h1 {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+}
+
+.start-trading {
+  text-align: center;
+  background-color: #08090a;
+}
+.start-trading__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px 0 120px 0;
+}
+.start-trading__image {
+  width: 388px;
+  aspect-ratio: 1/1;
+}
+.start-trading__title {
+  margin-top: -44px;
+  margin-bottom: 24px;
+  line-height: 64px;
+}
+.start-trading__button {
+  font-size: 24px;
+  line-height: 28px;
+  padding: 18px 40px;
+}
+.start-trading__button::before {
+  border-radius: 16px;
+}
+
+.accent-text {
+  background: -o-linear-gradient(149.89deg, #8c44d4 5.04%, #ffd0a5 76.02%);
+  background: linear-gradient(300.11deg, #8c44d4 5.04%, #ffd0a5 76.02%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.comfort-trading {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-14.88%, #ffd0a5), color-stop(51.56%, #8c44d4));
+  background: -o-linear-gradient(bottom, #ffd0a5 -14.88%, #8c44d4 51.56%);
+  background: linear-gradient(0deg, #ffd0a5 -14.88%, #8c44d4 51.56%);
+  text-align: center;
+  margin-top: -40px;
+  border-radius: 40px;
+}
+.comfort-trading__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 80px;
+  overflow: hidden;
+}
+.comfort-trading__container::before, .comfort-trading__container::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.comfort-trading__container::before {
+  width: 51px;
+  aspect-ratio: 51/80;
+  background-image: url(../src/img/item-1.png);
+  left: 26px;
+  bottom: 211px;
+}
+.comfort-trading__container::after {
+  width: 40px;
+  aspect-ratio: 52/79;
+  background-image: url(../src/img/item-2.png);
+  right: 20px;
+  bottom: -6px;
+}
+.comfort-trading__title {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+.comfort-trading__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 17px;
+  letter-spacing: 0.02em;
+  padding: 12px 33px 12px 32px;
+  margin-bottom: 40px;
+}
+.comfort-trading__button::before {
+  background: #fff;
+  border-radius: 12px;
+}
+.comfort-trading__button::after {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 10px;
+  background-image: url(../src/icons/arrow.svg);
+}
+.comfort-trading__list {
+  margin-bottom: 52px;
+}
+.comfort-trading__image {
+  position: relative;
+  width: 290px;
+  height: 400px;
+  margin-bottom: -72px;
+}
+
+.advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.advantages__item:before {
+  content: "";
+  display: block;
+  width: 56px;
+  aspect-ratio: 1;
+  background-color: #22c379;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: 50%;
+}
+.advantages__item-1:before {
+  background-image: url(../src/icons/1.svg);
+}
+.advantages__item-2:before {
+  background-image: url(../src/icons/2.svg);
+}
+.advantages__item-3:before {
+  background-image: url(../src/icons/3.svg);
+}
+.advantages__item:last-child {
+  margin-top: -12px;
 }
