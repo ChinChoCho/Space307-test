@@ -212,6 +212,9 @@ body {
 .start-trading {
     text-align: center;
     background-color: $bg-color;
+    @media (min-width: 1440px) {
+        text-align: left;
+    }
     &__container {
         display: flex;
         align-items: center;
@@ -221,16 +224,27 @@ body {
             position: relative;
             padding: 32px 0 648px 0;
         }
+        @media (min-width: 1440px) {
+            padding: 160px 106px 344px 106px;
+            align-items: start;
+        }
     }
     &__image {
         width: 388px;
         aspect-ratio: 1 / 1;
         @media (min-width: 768px) {
             position: absolute;
+            width: 640px;
             top: 280px;
             left: 50%;
-            width: 640px;
             transform: translateX(-50%);
+        }
+        @media (min-width: 1440px) {
+            width: 815px;
+            top: -3px;
+            right: -51px;
+            left: auto;
+            transform: none;
         }
     }
     &__title {
@@ -242,6 +256,12 @@ body {
             margin-bottom: 40px;
             margin-left: -9px;
         }
+        @media (min-width: 1440px) {
+            font-size: 80px;
+            line-height: 88px;
+            margin-bottom: 48px;
+            margin-left: 0;
+        }
     }
     &__button {
         font-size: 24px;
@@ -252,6 +272,10 @@ body {
         }
         @media (min-width: 768px) {
             margin-left: -9px;
+        }
+        @media (min-width: 1440px) {
+            padding: 18px 45px 18px 40px;
+            margin-left: 0;
         }
     }
 }
@@ -273,8 +297,12 @@ body {
         border-radius: 80px;
         z-index: 1;
     }
+    @media (min-width: 1440px) {
+        background: linear-gradient(73.67deg, #FFD0A5 2.65%, #8C44D4 52.64%);
+        text-align: left;
+    }
     &__container {
-        position: relative;
+        // position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -283,6 +311,12 @@ body {
         overflow: hidden;
         @media (min-width: 768px) {
             padding: 56px 60px 0 60px;
+        }
+        @media (min-width: 1440px) {
+            padding: 80px 116px 80px 828px;
+            gap: 64px;
+            align-items: start;
+            // overflow: auto;
         }
     }
     &__title {
@@ -293,6 +327,9 @@ body {
             line-height: 64px;
             margin: 0 64px;
         }
+        @media (min-width: 1440px) {
+            margin: 0;
+        }
     }
     &__button {
         display: flex;
@@ -300,6 +337,10 @@ body {
         gap: 17px;
         letter-spacing: 0.02em;
         padding: 12px 33px 12px 32px;
+        @media (min-width: 1440px) {
+            gap: 19px;
+            padding: 12px 29px 12px 30px;
+        }
         &::before {
             background: #fff;
             border-radius: 12px;
@@ -329,12 +370,23 @@ body {
             margin-top: 8px;
             margin-bottom: -80px;
         }
+        @media (min-width: 1440px) {
+            position: absolute;
+            width: 600px;
+            height: 824px;
+            bottom: 0;
+            left: 108px;
+            margin-bottom: 0px;
+        }
         &::before,
         &::after {
             position: absolute;
             content: "";
             background-repeat: no-repeat;
             background-size: contain;
+            @media (min-width: 1440px) {
+                display: none;
+            }
         }
         &::before {
             width: 51px;
@@ -377,6 +429,10 @@ body {
         justify-content: space-between;
         align-items: start;
     }
+    @media (min-width: 1440px) {
+        flex-direction: column;
+        gap: 40px;
+    }
     &__item {
         display: flex;
         flex-direction: column;
@@ -387,6 +443,11 @@ body {
         line-height: 24px;
         @media (min-width: 768px) {
             flex: 1;
+        }
+        @media (min-width: 1440px) {
+            flex-direction: row;
+            font-size: 20px;
+            line-height: 32px;
         }
         &:before {
             content: "";
@@ -399,6 +460,9 @@ body {
             background-position: 50%;
             // background-size: 24px;
             // aspect-ratio: 1;
+            @media (min-width: 1440px) {
+                flex-shrink: 0;
+            }
         }
         &-1 {
             &:before {

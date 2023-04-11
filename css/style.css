@@ -259,6 +259,11 @@ body._active {
   text-align: center;
   background-color: #08090a;
 }
+@media (min-width: 1440px) {
+  .start-trading {
+    text-align: left;
+  }
+}
 .start-trading__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,6 +283,14 @@ body._active {
     padding: 32px 0 648px 0;
   }
 }
+@media (min-width: 1440px) {
+  .start-trading__container {
+    padding: 160px 106px 344px 106px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
 .start-trading__image {
   width: 388px;
   aspect-ratio: 1/1;
@@ -285,12 +298,23 @@ body._active {
 @media (min-width: 768px) {
   .start-trading__image {
     position: absolute;
+    width: 640px;
     top: 280px;
     left: 50%;
-    width: 640px;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+@media (min-width: 1440px) {
+  .start-trading__image {
+    width: 815px;
+    top: -3px;
+    right: -51px;
+    left: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 .start-trading__title {
@@ -305,6 +329,14 @@ body._active {
     margin-left: -9px;
   }
 }
+@media (min-width: 1440px) {
+  .start-trading__title {
+    font-size: 80px;
+    line-height: 88px;
+    margin-bottom: 48px;
+    margin-left: 0;
+  }
+}
 .start-trading__button {
   font-size: 24px;
   line-height: 28px;
@@ -316,6 +348,12 @@ body._active {
 @media (min-width: 768px) {
   .start-trading__button {
     margin-left: -9px;
+  }
+}
+@media (min-width: 1440px) {
+  .start-trading__button {
+    padding: 18px 45px 18px 40px;
+    margin-left: 0;
   }
 }
 
@@ -344,8 +382,14 @@ body._active {
     z-index: 1;
   }
 }
+@media (min-width: 1440px) {
+  .comfort-trading {
+    background: -o-linear-gradient(16.33deg, #FFD0A5 2.65%, #8C44D4 52.64%);
+    background: linear-gradient(73.67deg, #FFD0A5 2.65%, #8C44D4 52.64%);
+    text-align: left;
+  }
+}
 .comfort-trading__container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,6 +409,15 @@ body._active {
     padding: 56px 60px 0 60px;
   }
 }
+@media (min-width: 1440px) {
+  .comfort-trading__container {
+    padding: 80px 116px 80px 828px;
+    gap: 64px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
 .comfort-trading__title {
   font-size: 32px;
   line-height: 40px;
@@ -374,6 +427,11 @@ body._active {
     font-size: 56px;
     line-height: 64px;
     margin: 0 64px;
+  }
+}
+@media (min-width: 1440px) {
+  .comfort-trading__title {
+    margin: 0;
   }
 }
 .comfort-trading__button {
@@ -386,6 +444,12 @@ body._active {
   gap: 17px;
   letter-spacing: 0.02em;
   padding: 12px 33px 12px 32px;
+}
+@media (min-width: 1440px) {
+  .comfort-trading__button {
+    gap: 19px;
+    padding: 12px 29px 12px 30px;
+  }
 }
 .comfort-trading__button::before {
   background: #fff;
@@ -420,11 +484,26 @@ body._active {
     margin-bottom: -80px;
   }
 }
+@media (min-width: 1440px) {
+  .comfort-trading__image-wrapper {
+    position: absolute;
+    width: 600px;
+    height: 824px;
+    bottom: 0;
+    left: 108px;
+    margin-bottom: 0px;
+  }
+}
 .comfort-trading__image-wrapper::before, .comfort-trading__image-wrapper::after {
   position: absolute;
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
+}
+@media (min-width: 1440px) {
+  .comfort-trading__image-wrapper::before, .comfort-trading__image-wrapper::after {
+    display: none;
+  }
 }
 .comfort-trading__image-wrapper::before {
   width: 51px;
@@ -487,6 +566,15 @@ body._active {
             align-items: start;
   }
 }
+@media (min-width: 1440px) {
+  .advantages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+}
 .advantages__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,6 +598,16 @@ body._active {
             flex: 1;
   }
 }
+@media (min-width: 1440px) {
+  .advantages__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
 .advantages__item:before {
   content: "";
   display: block;
@@ -519,6 +617,12 @@ body._active {
   background-repeat: no-repeat;
   border-radius: 50%;
   background-position: 50%;
+}
+@media (min-width: 1440px) {
+  .advantages__item:before {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
 }
 .advantages__item-1:before {
   background-image: url(../src/icons/1.svg);

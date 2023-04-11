@@ -10,3 +10,9 @@ menuIcon.addEventListener("click", function () {
     menuIcon.classList.toggle("_active");
     body[0].classList.toggle("_active");
 });
+
+window.addEventListener("resize", () => {
+    menu.classList.remove("_active");
+    menuIcon.classList.remove("_active");
+    body[0].classList.remove("_active");
+});
