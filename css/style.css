@@ -37,6 +37,11 @@ body._active {
   background-color: #08090a;
   padding: 16px 16px 0 16px;
 }
+@media (min-width: 768px) {
+  .header {
+    padding: 16px 24px;
+  }
+}
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,6 +92,11 @@ body._active {
   height: 24px;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .menu__icon {
+    display: none;
+  }
 }
 .menu__icon span {
   -webkit-transition: 0.2s ease 0s;
@@ -202,11 +212,16 @@ body._active {
   font-size: 24px;
   font-weight: 900;
 }
-.logo__title > span {
+.logo__title span {
   color: #777;
 }
-.logo__title > span > span {
+.logo__title span > span {
   font-size: 0;
+}
+@media (min-width: 768px) {
+  .logo__title span > span {
+    font-size: 24px;
+  }
 }
 
 .button {
@@ -217,6 +232,11 @@ body._active {
   line-height: 24px;
   border-width: 0;
   padding: 8px 16px;
+}
+@media (min-width: 768px) {
+  .button {
+    padding: 12px 24px;
+  }
 }
 .button:hover {
   text-decoration: underline;
@@ -252,14 +272,38 @@ body._active {
           flex-direction: column;
   padding: 24px 0 120px 0;
 }
+@media (min-width: 768px) {
+  .start-trading__container {
+    position: relative;
+    padding: 32px 0 648px 0;
+  }
+}
 .start-trading__image {
   width: 388px;
   aspect-ratio: 1/1;
+}
+@media (min-width: 768px) {
+  .start-trading__image {
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    width: 640px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 .start-trading__title {
   margin-top: -44px;
   margin-bottom: 24px;
   line-height: 64px;
+}
+@media (min-width: 768px) {
+  .start-trading__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    margin-left: -9px;
+  }
 }
 .start-trading__button {
   font-size: 24px;
@@ -268,6 +312,11 @@ body._active {
 }
 .start-trading__button::before {
   border-radius: 16px;
+}
+@media (min-width: 768px) {
+  .start-trading__button {
+    margin-left: -9px;
+  }
 }
 
 .accent-text {
@@ -287,6 +336,14 @@ body._active {
   margin-top: -40px;
   border-radius: 40px;
 }
+@media (min-width: 768px) {
+  .comfort-trading {
+    position: relative;
+    margin-top: -80px;
+    border-radius: 80px;
+    z-index: 1;
+  }
+}
 .comfort-trading__container {
   position: relative;
   display: -webkit-box;
@@ -299,33 +356,25 @@ body._active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 80px;
+  gap: 40px;
+  padding: 40px 80px 0 80px;
   overflow: hidden;
 }
-.comfort-trading__container::before, .comfort-trading__container::after {
-  position: absolute;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.comfort-trading__container::before {
-  width: 51px;
-  aspect-ratio: 51/80;
-  background-image: url(../src/img/item-1.png);
-  left: 26px;
-  bottom: 211px;
-}
-.comfort-trading__container::after {
-  width: 40px;
-  aspect-ratio: 52/79;
-  background-image: url(../src/img/item-2.png);
-  right: 20px;
-  bottom: -6px;
+@media (min-width: 768px) {
+  .comfort-trading__container {
+    padding: 56px 60px 0 60px;
+  }
 }
 .comfort-trading__title {
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .comfort-trading__title {
+    font-size: 56px;
+    line-height: 64px;
+    margin: 0 64px;
+  }
 }
 .comfort-trading__button {
   display: -webkit-box;
@@ -337,7 +386,6 @@ body._active {
   gap: 17px;
   letter-spacing: 0.02em;
   padding: 12px 33px 12px 32px;
-  margin-bottom: 40px;
 }
 .comfort-trading__button::before {
   background: #fff;
@@ -351,13 +399,65 @@ body._active {
   background-image: url(../src/icons/arrow.svg);
 }
 .comfort-trading__list {
-  margin-bottom: 52px;
+  margin-bottom: 12px;
 }
-.comfort-trading__image {
+@media (min-width: 768px) {
+  .comfort-trading__list {
+    margin-bottom: 0px;
+  }
+}
+.comfort-trading__image-wrapper {
   position: relative;
   width: 290px;
   height: 400px;
-  margin-bottom: -72px;
+  margin-bottom: -40px;
+}
+@media (min-width: 768px) {
+  .comfort-trading__image-wrapper {
+    width: 348px;
+    height: 480px;
+    margin-top: 8px;
+    margin-bottom: -80px;
+  }
+}
+.comfort-trading__image-wrapper::before, .comfort-trading__image-wrapper::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.comfort-trading__image-wrapper::before {
+  width: 51px;
+  aspect-ratio: 51/80;
+  background-image: url(../src/img/item-1.png);
+  left: -9px;
+  top: 77px;
+}
+@media (min-width: 768px) {
+  .comfort-trading__image-wrapper::before {
+    width: 67px;
+    top: 141px;
+    left: -111px;
+  }
+}
+.comfort-trading__image-wrapper::after {
+  width: 40px;
+  aspect-ratio: 52/79;
+  background-image: url(../src/img/item-2.png);
+  right: -15px;
+  bottom: 26px;
+}
+@media (min-width: 768px) {
+  .comfort-trading__image-wrapper::after {
+    width: 52px;
+    right: -78px;
+    bottom: 80px;
+  }
+}
+.comfort-trading__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .advantages {
@@ -372,6 +472,20 @@ body._active {
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
+}
+@media (min-width: 768px) {
+  .advantages {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 .advantages__item {
   display: -webkit-box;
@@ -388,6 +502,13 @@ body._active {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+}
+@media (min-width: 768px) {
+  .advantages__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 .advantages__item:before {
   content: "";
@@ -410,4 +531,9 @@ body._active {
 }
 .advantages__item:last-child {
   margin-top: -12px;
+}
+@media (min-width: 768px) {
+  .advantages__item:last-child {
+    margin-top: 0px;
+  }
 }
