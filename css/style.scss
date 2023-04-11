@@ -36,6 +36,9 @@ body {
         overflow: hidden;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .header {
     background-color: $bg-color;

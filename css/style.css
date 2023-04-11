@@ -33,6 +33,10 @@ body._active {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   background-color: #08090a;
   padding: 16px 16px 0 16px;
